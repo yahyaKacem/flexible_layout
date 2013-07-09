@@ -1,0 +1,42 @@
+{
+  "name": "flexible_layout",
+  "version": "0.0.1",
+  "description": "A flexible layout module with AngularJS (resizable)",
+  "main": "index.html",
+  "scripts": {
+    "test": "none"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "gzip-js": "*",
+    "matchdep": "*",
+    "grunt-open": "*",
+    "grunt-bower-hooks": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-compass": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yahyaKacem/flexible_layout.git"
+  },
+  "keywords": [
+    "Flexible_layout"
+  ],
+  "author": {
+    "name": "Yahya Kacem",
+    "email": "fuj.tyoli@gmail.com"
+  },
+  "licenses": {
+    "type": "BSD"
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "b6e1e0cc32a927d57f88d7b4d48f1628d53bb5b4",
+  "bugs": {
+    "url": "https://github.com/yahyaKacem/flexible_layout/issues"
+  }
+}

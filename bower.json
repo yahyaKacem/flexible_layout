@@ -1,0 +1,9 @@
+{
+  "name": "flexible_layout",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "*",
+    "sass-bootstrap": "*",
+    "angular-unstable": "*"
+  }
+}
