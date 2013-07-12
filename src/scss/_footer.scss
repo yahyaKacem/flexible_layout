@@ -1,0 +1,11 @@
+footer#footer{
+  height: $footer-height;
+  background: $header-footer-bg-color;
+  > .border-top {
+    height    : $horizontal-border-height;
+    width     : $horizontal-border-width;
+    background: $horizontal-border-bg-color;
+    border    : $horizontal-border-border-height outset $horizontal-border-border-color;
+    @include box-sizing(border-box);
+  }
+}

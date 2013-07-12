@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "jquery": "*",
+    "underscore": "*",
+    "jquery-resize": "*",
     "sass-bootstrap": "*",
     "angular-unstable": "*"
   }

@@ -46,12 +46,14 @@ module.exports = function(grunt) {
     concat: {
       options: {
         banner: '<%=banner%>',
-        separator: ""
+        separator: "\n"
       },
       libs: {
         files: {
           '<%=tempDir%>/js/libs.js': [
             '<%=libsDir%>/jquery/jquery.min.js',
+            '<%=libsDir%>/underscore/underscore-min.js',
+            '<%=libsDir%>/jquery-resize/jquery.ba-resize.min.js',
             '<%=libsDir%>/angular-unstable/angular.js'
           ]
         }
@@ -59,12 +61,20 @@ module.exports = function(grunt) {
       components: {
         files: {
           '<%=tempDir%>/js/components.js': [
+            // flexibleLayout component files
             '<%=jsDir%>/components/flexiblelayout/flexiblelayout.vars.js',
             '<%=jsDir%>/components/flexiblelayout/directives/flexiblelayout.directive.js',
-            '<%=jsDir%>/components/flexiblelayout/flexiblelayout.app.js'
+            '<%=jsDir%>/components/flexiblelayout/directives/main.directive.js',
+            '<%=jsDir%>/components/flexiblelayout/directives/notes.directive.js',
+            '<%=jsDir%>/components/flexiblelayout/directives/handle.directive.js',
+            '<%=jsDir%>/components/flexiblelayout/flexiblelayout.app.js',
+            // resize component files
+            '<%=jsDir%>/components/resize/resize.vars.js',
+            '<%=jsDir%>/components/resize/directives/resize.directive.js',
+            '<%=jsDir%>/components/resize/resize.app.js'
           ]
         }
-      }
+      },
       main: {
         files: {
           '<%=tempDir%>/js/main.js': [
@@ -75,13 +85,18 @@ module.exports = function(grunt) {
         }
       }
     },
-    // copy: {
-    //   libsTpls: {
-    //     files: [
-    //       {expand: true, flatten: true, src: ['src/libs/angular-slider/*.html'], dest: 'src/.tmp/tpls/'}
-    //     ]
-    //   }
-    // },
+    copy: {
+      componentsTpls: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            dest: 'src/.tmp/tpls/',
+            src: ['src/js/components/flexiblelayout/tpls/*.html']
+          }
+        ]
+      }
+    },
     uglify: {
       options: {
         banner: '<%= banner %>'
@@ -128,7 +143,7 @@ module.exports = function(grunt) {
         tasks: ['default']
       },
       compass: {
-        files: '<%=scssDir%>/*scss',
+        files: ['<%=scssDir%>/*.scss', '<%=jsDir%>/components/**/*.scss'],
         tasks: ['compass']
       },
       libs: {
@@ -138,6 +153,10 @@ module.exports = function(grunt) {
       components: {
         files: '<%=jsDir%>/components/**/*.js',
         tasks: ['concat:components']
+      },
+      componentsTpls: {
+        files: '<%=jsDir%>/components/**/*.html',
+        tasks: ['copy']
       },
       main: {
         files: '<%=jsDir%>/*.js',

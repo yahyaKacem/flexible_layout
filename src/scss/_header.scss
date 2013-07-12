@@ -1,0 +1,14 @@
+header#header{
+  height: $header-height;
+  background: $header-footer-bg-color;
+  position: relative;
+  > .border-bottom {
+    position  : absolute;
+    bottom    : 0;
+    height    : $horizontal-border-height;
+    width     : $horizontal-border-width;
+    background: $horizontal-border-bg-color;
+    border    : $horizontal-border-border-height outset $horizontal-border-border-color;
+    @include box-sizing(border-box);
+  }
+}

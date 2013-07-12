@@ -1,0 +1,12 @@
+.handle {
+  width           : 100%;
+  height          : $handleHeight;
+  background-color: $handleBgColor;
+  cursor          : ns-resize;
+}
+.handle.moving {
+  background-color: $handleMovingColor;
+}
+.handle.constrained {
+  background-color: $handleConstrainedBgColor;
+}

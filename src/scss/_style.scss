@@ -1,0 +1,13 @@
+html, body, div#wrapper{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+@import '_header';
+section#main-content{
+  background: $main-bg-color;
+  color: $main-color;
+}
+@import '../js/components/flexiblelayout/scss/_notes';
+@import '../js/components/flexiblelayout/scss/_handle';
+@import '_footer';

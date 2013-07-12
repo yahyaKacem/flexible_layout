@@ -1,9 +1,9 @@
 //########################################################################
-var app = angular.module('app', ['flexibleLayout', 'resize']);
+var resizeApp = angular.module('resize', []);
 //########################################################################
 //######injecting the dependencies########################################
-controllers.MainCtrl.$inject = ['$scope', '$window'];
+resizeDirectives.resize.$inject = ['$window', '$timeout'];
 //########################################################################
 //####assigning the controllers and the directives to the application#####
-app.controller(controllers);
+resizeApp.directive(resizeDirectives);
 //########################################################################

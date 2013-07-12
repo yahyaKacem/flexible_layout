@@ -1,9 +1,7 @@
 //########################################################################
-var app = angular.module('app', ['flexibleLayout', 'resize']);
+var flexibleLayoutApp = angular.module('flexibleLayout', []);
 //########################################################################
-//######injecting the dependencies########################################
-controllers.MainCtrl.$inject = ['$scope', '$window'];
-//########################################################################
+flexibleLayoutDirectives.handle.$inject = ['$window'];
 //####assigning the controllers and the directives to the application#####
-app.controller(controllers);
+flexibleLayoutApp.directive(flexibleLayoutDirectives);
 //########################################################################
